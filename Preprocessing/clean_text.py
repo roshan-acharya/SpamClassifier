@@ -3,6 +3,7 @@ import pandas as pd
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from sklearn.preprocessing import LabelEncoder
 import string
 
 
@@ -57,19 +58,20 @@ def remove_stop_words(text):
             filtered_words.append(word)
     return ' '.join(filtered_words)
 
+def encoder(df):
+    le = LabelEncoder()
+    df['label'] = le.fit_transform(df['label'])
+    return df
+
 def clean_text(df):
     df = Remove_unnecessary_column(df)
     df['text'] = df['text'].apply(to_lowercase)
     df['text'] = df['text'].apply(remove_punctuation)
     df['text'] = df['text'].apply(replace_chat_words)
     df['text'] = df['text'].apply(remove_stop_words)
-    df.to_csv('../Data/Processed/cleaned_spam.csv', index=False)
+    df = encoder(df)
     return df
 
-if __name__ == "__main__":
-    df = pd.read_csv('../Data/Raw/spam.csv', encoding='latin-1')
-    cleaned_df = clean_text(df)
-    print(cleaned_df.head())
 
 
 
