@@ -2,7 +2,7 @@ import pickle as pk
 import streamlit as st 
 
 # Load the model
-model=pk.load(open('spam_detection_model.pkl','rb'))
+model=pk.load(open('./Models/best_spam_model.pkl','rb'))
 st.title("Spam Ham Classifier")
 text=st.text_area("Enter the text")
 
