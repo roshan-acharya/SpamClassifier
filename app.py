@@ -1,10 +1,13 @@
 import pickle as pk
 import streamlit as st 
-
+import os
+BASE_DIR = os.path.dirname(__file__)
+MODEL_PATH = os.path.join(BASE_DIR, './models/best_spam_model.pkl')
+VECTOR_PATH = os.path.join(BASE_DIR, './models/vectorizer.pkl')
 #load model and vectorizer
-with open('./models/best_spam_model.pkl', 'rb') as f:
+with open(MODEL_PATH, 'rb') as f:
     model = pk.load(f)
-with open('./models/vectorizer.pkl', 'rb') as f:
+with open(VECTOR_PATH, 'rb') as f:
     vectorizer = pk.load(f)
 
 #streamlit app
