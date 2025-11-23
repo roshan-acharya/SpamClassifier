@@ -42,7 +42,9 @@ The project includes **data preprocessing**, **Bag of Word vectorization**, **tr
 | Gradient Boosting | 0.9589 |
 | AdaBoost | 0.9147 |
 
-**🏆 4. Best Model:** Multinomial Naive Bayes  
+## 🏆 4. Best Model
+**Multinomial Naive Bayes**  
+
 Saved as: `models/best_spam_model.pkl`
 
 ---
