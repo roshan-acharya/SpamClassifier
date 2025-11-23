@@ -1,7 +1,6 @@
 # 📧 Spam–Ham Classifier  
 
-A complete **Machine Learning + NLP** project to classify messages as **Spam** or **Ham**.  
-The project includes **data preprocessing**, **Bag of Word vectorization**, **training multiple ML models**, **model comparison**, **ROC & confusion matrix plots** and **Streamlit deployment**.
+A complete **Machine Learning + NLP** project to classify messages as **Spam** or **Ham**. The project includes **data preprocessing**, **Bag of Word vectorization**, **training multiple ML models**, **model comparison**, **ROC & confusion matrix plots** and **Streamlit deployment**.
 
 ---
 
