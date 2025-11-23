@@ -70,6 +70,7 @@ def clean_text(df):
     df['text'] = df['text'].apply(replace_chat_words)
     df['text'] = df['text'].apply(remove_stop_words)
     df = encoder(df)
+    df.to_csv('./data/processed/cleaned_spam_data.csv', index=False)
     return df
 
 
