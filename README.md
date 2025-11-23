@@ -23,7 +23,7 @@ A complete **Machine Learning + NLP** project to classify messages as **Spam** o
 
 1. **Load Dataset** → `preprocessing/load_data.py`  
 2. **Clean Text** → `preprocessing/clean_text.py`  
-3. **Vectorization (TF-IDF)** → `preprocessing/vectorize.py`  
+3. **Vectorization (BOW)** → `preprocessing/vectorize.py`  
 4. **Train Multiple Models** → `preprocessing/train.py`  
 5. **Evaluate Models** → `preprocessing/evaluate.py`  
 6. **Select Best Model & Save** → `models/best_spam_model.pkl` + `models/vectorizer.pkl`  
